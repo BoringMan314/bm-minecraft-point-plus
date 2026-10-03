@@ -1,0 +1,31 @@
+name: bm-minecraft-point-plus
+version: "26.3_0.0.1"
+main: bm.minecraft.point.plus.BmMinecraftPointPlusPlugin
+api-version: '26.3'
+description: "點位 PLUS。"
+authors:
+  - "[B.M] 圓周率™3.14"
+website: "http://exnormal.com:81/"
+commands:
+  home:
+    description: 返回目前世界的床，沒有床則到世界重生點。
+    usage: /home
+    permission: bm-minecraft-point-plus.use
+  spawn:
+    description: 返回目前世界的重生點。
+    usage: /spawn
+    permission: bm-minecraft-point-plus.use
+  point:
+    description: 儲存、列出或傳送到個人點位。
+    usage: /point [set <1-10> [標註]|<1-10>]
+    permission: bm-minecraft-point-plus.use
+  bm-minecraft-point-plus:
+    description: 管理 bm-minecraft-point-plus。
+    usage: /bm-minecraft-point-plus [0|1|info|status|reload]
+permissions:
+  bm-minecraft-point-plus.use:
+    description: 允許使用 /home、/spawn 與 /point。
+    default: true
+  bm-minecraft-point-plus.admin:
+    description: 允許管理 bm-minecraft-point-plus。
+    default: op
